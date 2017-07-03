@@ -66,7 +66,7 @@ int32 monitor_thread(void *data)
 	ETEXT_DESC *monitor = cookie->monitor;
 	
 	char mess_id[64];	
-	sprintf(mess_id, "TESS#%X",(unsigned int)(data));
+	sprintf(mess_id, "TESS#%p",data);
 	
 	int lastprogress = monitor->progress;
 	int frame = 0;

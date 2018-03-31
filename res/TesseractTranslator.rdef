@@ -7,10 +7,10 @@ resource app_signature "application/x-vnd.Haiku-TesseractTranslator";
 resource app_version {
 	major  = 1,
 	middle = 0,
-	minor  = 0,
+	minor  = 1,
 	variety = 0,
 	internal = 0,
-	short_info = "1.0.0",
+	short_info = "1.0.1",
 	long_info = "Haiku Tesseract-OCR Translator Add-Ons."
 };
 

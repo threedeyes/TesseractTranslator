@@ -32,10 +32,7 @@
 
 #include "TesseractLanguages.h"
 
-#define DOCUMENT_COUNT "/documentCount"
-#define DOCUMENT_INDEX "/documentIndex"
-
-#define TESS_TRANSLATOR_VERSION B_TRANSLATION_MAKE_VERSION(1, 0, 0)
+#define TESS_TRANSLATOR_VERSION B_TRANSLATION_MAKE_VERSION(1, 0, 1)
 #define TESS_TEXT_FORMAT	'TESS'
 
 #define BITS_IN_QUALITY		1
@@ -64,9 +61,5 @@ class TesseractTranslator : public BaseTranslator {
 	protected:
 		virtual ~TesseractTranslator();
 };
-
-// Extensions that ShowImage supports
-extern const char *kDocumentCount;
-extern const char *kDocumentIndex;
 
 #endif	/* TESS_TRANSLATOR_H */

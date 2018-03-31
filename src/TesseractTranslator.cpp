@@ -1,5 +1,5 @@
 /*
- * Copyright 2013, Gerasim Troeglazov, 3dEyes@gmail.com. All rights reserved.
+ * Copyright 2013-2018, Gerasim Troeglazov, 3dEyes@gmail.com. All rights reserved.
  * Distributed under the terms of the MIT License.
  */
 
@@ -11,10 +11,7 @@
 
 #include "ConfigView.h"
 
-const char *kDocumentCount = "/documentCount";
-const char *kDocumentIndex = "/documentIndex";
-
-#define kTextMimeType "text/plain"
+#define kTextMimeType "text/tesseract"
 #define kTextName "Recognized text (Tesseract)"
 
 // The input formats that this translator supports.

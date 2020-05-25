@@ -28,6 +28,7 @@
 
 #include <tesseract/baseapi.h>
 #include <tesseract/ocrclass.h>
+#include <tesseract/genericvector.h>
 #include <leptonica/allheaders.h>
 
 #include "TesseractLanguages.h"

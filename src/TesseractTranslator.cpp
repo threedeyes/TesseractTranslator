@@ -193,7 +193,7 @@ TesseractTranslator::DerivedTranslate(BPositionIO *source,
     		resume_thread(my_thread);
     	 
 		 	tesseract::TessBaseAPI tessApi;
-    		tessApi.Init("data", "eng");
+			tessApi.Init(NULL, "eng");
     		
     		BString langName("eng");
     		
@@ -214,7 +214,7 @@ TesseractTranslator::DerivedTranslate(BPositionIO *source,
      		} 
      
     		tessApi.End();
-    		tessApi.Init("data", langName.String());
+			tessApi.Init(NULL, langName.String());
     		
 	    	unsigned char *pix = (unsigned char *)malloc(row_bytes*height);
 

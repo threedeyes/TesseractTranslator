@@ -13,7 +13,6 @@
 
 #include <stdio.h>
 
-
 ConfigView::ConfigView(TranslatorSettings *settings)
 	: BGroupView("ICNSTranslator Settings", B_VERTICAL, 0)
 {
@@ -51,7 +50,7 @@ ConfigView::ConfigView(TranslatorSettings *settings)
 	BPopUpMenu* menu = new BPopUpMenu("eng");
 
 	tesseract::TessBaseAPI tessApi;
-	tessApi.Init("data","eng");
+	tessApi.Init(NULL,"eng");
 	
 	GenericVector<STRING> languages;
     tessApi.GetAvailableLanguagesAsVector(&languages);
@@ -60,15 +59,15 @@ ConfigView::ConfigView(TranslatorSettings *settings)
     	currentLanguage = 0;
 
 	for (int index = 0; index < languages.size(); ++index) {
-        STRING& string = languages[index];
+        STRING& language = languages[index];
 		
 		BMessage* message = new BMessage('LNGC');
 		message->AddInt32("value", index);
 	
 		int i=0;
-		BString langName(string.string());
+		BString langName(language.string());
 		while(gLngInfo[i].lang[0] != 0) {
-			if (strcmp(gLngInfo[i].lang, string.string()) == 0) {
+			if (strcmp(gLngInfo[i].lang, language.string()) == 0) {
 				langName.SetTo(gLngInfo[i].description);
 				break;
 			}
